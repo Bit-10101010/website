@@ -27,7 +27,7 @@ async function loadBackendStatus() {
     backendStatus.textContent = `Backend: ${data.status.toUpperCase()} · ${data.message}`;
     backendStatus.classList.add('is-online');
   } catch (error) {
-    backendStatus.textContent = 'Backend: OFFLINE · Start the app with `npm start`.';
+    backendStatus.textContent = 'Backend: OFFLINE · Start the app with `dotnet run`.';
     backendStatus.classList.add('is-offline');
   }
 }
