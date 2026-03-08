@@ -31,6 +31,7 @@
             <li><a href="#products">Products</a></li>
             <li><a href="#solutions">Solutions</a></li>
             <li><a href="#resources">Resources</a></li>
+            <li><a href="#control-center">Control Center</a></li>
             <li><a href="#company">Company</a></li>
           </ul>
           <a href="#" class="btn btn-outline">Sign in</a>
@@ -72,6 +73,47 @@
               <p>Protect identities, apps, and endpoints in real time.</p>
               <span>Zero Trust by design</span>
             </div>
+          </div>
+        </div>
+      </section>
+
+
+      <section id="control-center" class="section section-console">
+        <div class="container">
+          <h2>Bit Service Control Center</h2>
+          <p class="console-subtitle">A simple GUI to start, stop, restart, and monitor a backend worker.</p>
+
+          <div class="console-grid">
+            <article class="console-card">
+              <h3>Service Status</h3>
+              <p><strong>Name:</strong> <span id="service-name">Loading…</span></p>
+              <p>
+                <strong>State:</strong>
+                <span id="service-state" class="status-pill status-pill--unknown">Unknown</span>
+              </p>
+              <p><strong>Last action:</strong> <span id="service-last-action">—</span></p>
+              <p><strong>Uptime:</strong> <span id="service-uptime">0s</span></p>
+              <p><strong>Restarts:</strong> <span id="service-restarts">0</span></p>
+              <p><strong>Tasks processed:</strong> <span id="service-tasks">0</span></p>
+            </article>
+
+            <article class="console-card">
+              <h3>Controls</h3>
+              <div class="console-actions">
+                <button id="start-service" class="btn btn-solid" type="button">Start service</button>
+                <button id="stop-service" class="btn btn-outline btn-outline-dark" type="button">Stop service</button>
+                <button id="restart-service" class="btn btn-outline" type="button">Restart service</button>
+                <button id="refresh-service" class="btn btn-link btn-link-button" type="button">Refresh status</button>
+              </div>
+              <p id="console-feedback" class="console-feedback" aria-live="polite">Ready.</p>
+            </article>
+
+            <article class="console-card console-card--full">
+              <h3>Activity Log</h3>
+              <ul id="service-log" class="service-log">
+                <li>Loading service activity…</li>
+              </ul>
+            </article>
           </div>
         </div>
       </section>
