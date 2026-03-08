@@ -1,4 +1,11 @@
-var builder = WebApplication.CreateBuilder(args);
+var appBasePath = AppContext.BaseDirectory;
+
+var builder = WebApplication.CreateBuilder(new WebApplicationOptions
+{
+    Args = args,
+    ContentRootPath = appBasePath,
+    WebRootPath = Path.Combine(appBasePath, "wwwroot")
+});
 
 var app = builder.Build();
 
